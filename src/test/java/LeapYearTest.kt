@@ -15,7 +15,7 @@ class LeapYearTest {
     }
 
     @ParameterizedTest
-    @ValueSource(ints = [4, 8])
+    @ValueSource(ints = [4, 8, 12])
     fun `should be leap when is multiple of 4`(number: Int) {
         val validator = LeapYearValidator()
 
