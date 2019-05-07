@@ -1,7 +1,10 @@
 class LeapYearValidator {
     fun isLeap(number: Int): Boolean {
+        if (isMultipleOf400(number)){
+            return true
+        }
         if (isMultipleOf4(number)
-            && (isNotMultipleOf100(number) || isMultipleOf400(number))
+            && (isNotMultipleOf100(number))
         ){
             return true
         }
