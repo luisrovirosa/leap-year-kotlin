@@ -6,10 +6,7 @@ class LeapYearValidator {
         if (isMultipleOf100(number)){
             return false
         }
-        if (isMultipleOf4(number)){
-            return true
-        }
-        return false
+        return isMultipleOf4(number)
     }
 
     private fun isMultipleOf400(number: Int) = number % 400 == 0
