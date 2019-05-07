@@ -3,9 +3,10 @@ class LeapYearValidator {
         if (isMultipleOf400(number)){
             return true
         }
-        if (isMultipleOf4(number)
-            && (!isMultipleOf100(number))
-        ){
+        if (isMultipleOf100(number)){
+            return false
+        }
+        if (isMultipleOf4(number)){
             return true
         }
         return false
