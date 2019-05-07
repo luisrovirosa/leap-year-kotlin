@@ -9,10 +9,12 @@ class LeapYearValidator {
         return isMultipleOf4(number)
     }
 
-    private fun isMultipleOf400(number: Int) = number % 400 == 0
+    private fun isMultipleOf400(number: Int): Boolean = isMultipleOf(number, 400)
 
-    private fun isMultipleOf100(number: Int) = number % 100 == 0
+    private fun isMultipleOf100(number: Int) = isMultipleOf(number, 100)
 
-    private fun isMultipleOf4(number: Int) = number % 4 == 0
+    private fun isMultipleOf4(number: Int) = isMultipleOf(number, 4)
+
+    private fun isMultipleOf(number: Int, multipleOf: Int) = number % multipleOf == 0
 
 }
